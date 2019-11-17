@@ -1,8 +1,8 @@
 package starbucks;
 
-public class SmallSize extends SizeDecorator {
+public class SmallSizeDecorator extends SizeDecorator {
 
-    public SmallSize(Beverage beverage) {
+    public SmallSizeDecorator(Beverage beverage) {
         super(beverage);
     }
 
