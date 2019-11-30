@@ -2,12 +2,12 @@ import chocolate.*;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class SingletonTest {
+public class SimpleSingletonTest {
 
     @Test
     public void isSingleton() {
-        Singleton aSingletonReference = Singleton.getInstance();
-        Singleton anotherSingletonReference = Singleton.getInstance();
+        SimpleSingleton aSingletonReference = SimpleSingleton.getInstance();
+        SimpleSingleton anotherSingletonReference = SimpleSingleton.getInstance();
         assertSame(aSingletonReference, anotherSingletonReference);
     }
 
