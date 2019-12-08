@@ -8,6 +8,11 @@ public class Light {
         state = "on";
     }
 
+    public void off() {
+        System.out.println("Shutting down light");
+        state = "off";
+    }
+
     public String getState() {
         return this.state;
     }

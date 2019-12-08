@@ -10,6 +10,11 @@ public class GarageDoor {
         doorState = "up";
     }
 
+    public void down() {
+        System.out.println("putting door down");
+        doorState = "down";
+    }
+
     public String getDoorState() {
         return doorState;
     }
