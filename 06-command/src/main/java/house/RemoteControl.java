@@ -3,6 +3,7 @@ package house;
 public class RemoteControl {
     Command[] onCommands;
     Command[] offCommands;
+    Command lastCommand;
 
     public RemoteControl() {
         onCommands = new Command[7];
@@ -16,10 +17,16 @@ public class RemoteControl {
 
     public void onButtonWasPushed(int slot) {
         onCommands[slot].execute();
+        lastCommand = onCommands[slot];
     }
 
     public void offButtonWasPushed(int slot) {
         offCommands[slot].execute();
+        lastCommand = offCommands[slot];
+    }
+
+    public void undoCommandWasPushed() {
+        lastCommand.undo();
     }
 
     public String toString() {

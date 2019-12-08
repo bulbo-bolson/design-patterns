@@ -31,4 +31,19 @@ public class LightTest {
 
         assertEquals("off", light.getState());
     }
+
+    @Test
+    public void undoLightOn() {
+        RemoteControl remote = new RemoteControl();
+        Light light = new Light();
+        LightOnCommand lightOn = new LightOnCommand(light);
+        LightOffCommand lightOff = new LightOffCommand(light);
+        int slot = 0;
+
+        remote.setCommand(slot, lightOn, lightOff);
+        remote.onButtonWasPushed(slot);
+        remote.undoCommandWasPushed();
+
+        assertEquals("off", light.getState());
+    }
 }

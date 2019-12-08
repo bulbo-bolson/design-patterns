@@ -31,5 +31,20 @@ public class GarageDoorTest {
 
         assertEquals("down", door.getDoorState());
     }
+
+    @Test
+    public void undoDoorUp() {
+        RemoteControl remote = new RemoteControl();
+        GarageDoor door = new GarageDoor();
+        GarageDoorOpenCommand openDoorCommand = new GarageDoorOpenCommand(door);
+        GarageDoorCloseCommand doorCloseCommand = new GarageDoorCloseCommand(door);
+        int slot = 0;
+
+        remote.setCommand(slot, openDoorCommand, doorCloseCommand);
+        remote.onButtonWasPushed(slot);
+        remote.undoCommandWasPushed();
+
+        assertEquals("down", door.getDoorState());
+    }
 }
 
