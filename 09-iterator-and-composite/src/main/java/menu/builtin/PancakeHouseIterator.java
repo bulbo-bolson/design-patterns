@@ -1,6 +1,7 @@
 package menu.builtin;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class PancakeHouseIterator implements Iterator {
     ArrayList<MenuItem> items;
@@ -23,5 +24,10 @@ public class PancakeHouseIterator implements Iterator {
         } else {
             return true;
         }
+    }
+
+    @Override
+    public void remove() {
+        throw new UnsupportedOperationException();
     }
 }
