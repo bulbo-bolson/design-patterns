@@ -1,6 +1,7 @@
-import menu.*;
+import menu.builtin.DinerMenu;
+import menu.builtin.PancakeHouseMenu;
+import menu.builtin.Waitress;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 public class MenuTest {
 
