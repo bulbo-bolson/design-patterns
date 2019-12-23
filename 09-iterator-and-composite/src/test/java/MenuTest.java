@@ -1,6 +1,6 @@
-import menu.builtin.DinerMenu;
-import menu.builtin.PancakeHouseMenu;
-import menu.builtin.Waitress;
+import menu.iterator.builtin.DinerMenu;
+import menu.iterator.builtin.PancakeHouseMenu;
+import menu.iterator.builtin.Waitress;
 import org.junit.Test;
 
 public class MenuTest {

@@ -1,4 +1,4 @@
-package menu.builtin;
+package menu.iterator.builtin;
 
 import java.util.Iterator;
 
